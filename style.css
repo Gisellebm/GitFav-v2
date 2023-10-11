@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: clamp(40%, 1% + 2vw, 62.5%);
+
+    --ff-primary: 'Poppins', sans-serif;
+    --color-actived: 66, 211, 255;
+    --text-color-secondary: rgba(var(--color-actived), 0.7);
+    --text-color-tertiary: rgba(var(--color-actived), 0.6);
+    --bg-button-remove: #ee0000;
+    --bg-color-body-secondary: #fff;
+    
+    --hue: 0;
+    --bg-color-body: hsl(var(--hue), 0%, 10%);
+    --bg-button-darkMode: hsl(var(--hue), 0%, 84%);
+    --bg-button-lightMode: hsl(var(--hue), 0%, 18%);
+    --bg-table-primary: hsl(var(--hue), 0%, 60%);
+    --bg-table-secondary: hsl(var(--hue), 0%, 84%);
+    --bg-table-title: hsl(var(--hue), 0%, 18%);
+}
+
+html.light body {
+    background-color: var(--bg-color-body-secondary);
+}
+
+html.light .ph-moon,
+html:not(.light) .ph-sun {
+    display: none;
+}
+
+html.light button.toggle {
+    color: var(--bg-button-lightMode);
+}
+
+html.light table th {
+    background-color: var(--text-color-tertiary);
+    color: var(--bg-table-title);
+}
+
+html.light header h1 {
+    color: var(--bg-table-title);
+}
+
+.colors {
+    position: absolute;
+    left: 3.2rem;
+    top: 3.2rem;
+    font-size: 3.2rem;
+    line-height: 0;
+}
+
+#toggle-mode {
+    position: absolute;
+    right: 3.2rem;
+    top: 3.2rem;
+    font-size: 3.2rem;
+    line-height: 0;
+}
+
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: var(--bg-color-body);
+}
+
+body * {
+    font-family: var(--ff-primary);
+}
+
+#app {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+button:hover {
+    opacity: 0.8;
+
+}
+
+button.toggle {
+    color: var(--bg-button-darkMode);
+}
+
+.colors button {
+    font-size: 3rem;   
+}
+
+.pink {
+    color: rgba(240, 46, 170);
+}
+
+.blue {
+    color: rgba(66, 211, 255);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 4rem 0;
+}
+
+header h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: var(--text-color-secondary);
+}
+
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.search input {
+    height: 3.2rem;
+    border: none;
+    border-radius: 0.5rem 0 0 0.5rem;
+    padding: 0 1rem;
+    background-color: var(--bg-table-secondary);
+    color: var(--bg-color-body);
+}
+
+.search button {
+    background-color: var(--text-color-tertiary);
+    border-radius: 0 0.5rem 0.5rem 0;
+    height: 3.2rem;
+    border: none;
+    padding: 0 1rem;
+    cursor: pointer;
+}
+
+.search button:hover {
+    filter: brightness(1.2);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+
+    box-shadow: rgba(var(--color-actived), 0.4) 0px 3px, rgba(var(--color-actived), 0.3) 0px 7px, rgba(var(--color-actived), 0.2) 0px 13px, rgba(var(--color-actived), 0.1) 0px 20px, rgba(var(--color-actived), 0.05) 0px 25px;
+}
+
+table * {
+    font-size: 1.4rem;
+    color: var(--bg-color-body);
+}
+
+table th {
+    background-color: var(--bg-table-title);
+    color: var(--text-color-secondary);
+    text-align: left;
+    font-weight: normal;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+}
+
+table th:first-child {
+    border-top-left-radius:  0.6rem;
+}
+
+table th:last-child {
+    border-top-right-radius:  0.6rem;
+}
+
+table td {
+    padding: 1.5rem;
+    text-align: left;
+}
+td.user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+table tr:nth-child(even) {
+    background-color: var(--bg-table-primary);
+}
+
+table tr:nth-child(odd) {
+    background-color: var(--bg-table-secondary);
+}
+
+
+td.user img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+td.user a {
+    text-decoration: none;
+}
+
+td.user a p {
+    font-weight: bold;
+}
+
+td .remove {
+    text-align: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--bg-button-remove);
+}

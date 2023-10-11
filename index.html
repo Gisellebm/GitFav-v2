@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Favorites</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script type="module" src="js/main.js" defer></script>
+</head>
+<body>
+    <div id="app">
+        <div class="colors">
+            <button class="ph-bold ph-arrow-circle-left blue">
+                <span class="sr-only">Mudar para a cor rosa</span>
+            </button>
+            <button class="ph-bold ph-arrow-circle-right pink">
+                <span class="sr-only">Voltar para a cor azul</span>
+            </button>
+        </div>
+        <button class="toggle" id="toggle-mode">
+            <span class="sr-only">Ativar light mode!</span>
+            <i class="ph-bold ph-sun"></i>
+            <i class="ph-bold ph-moon"></i>
+       </button>
+        <header>
+            <h1>GitHub Favorites</h1>
+            <div class="search">
+                <label class="sr-only" for="input-search">Usuário do GitHub</label>
+                <input id="input-search" type="text" placeholder="Usuário do GitHub">
+                <button>&plus;</button>
+            </div>
+        </header>
+        <table>
+            <thead>
+                <tr>
+                    <th>Usuário</th>
+                    <th>Repositórios</th>
+                    <th>Seguidores</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</body>
+</html>
