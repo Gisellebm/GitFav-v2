@@ -8,10 +8,10 @@
     font-size: clamp(40%, 1% + 2vw, 62.5%);
 
     --ff-primary: 'Poppins', sans-serif;
-    --color-actived: 66, 211, 255;
-    --text-color-secondary: rgba(var(--color-actived), 0.7);
-    --text-color-tertiary: rgba(var(--color-actived), 0.6);
-    --bg-button-remove: #ee0000;
+    --color-actived: 28, 148, 184;
+    --text-color-secondary: rgba(var(--color-actived));
+    --text-color-tertiary: rgba(var(--color-actived));
+    --bg-button-remove: #AE001B;
     --bg-color-body-secondary: #fff;
     
     --hue: 0;
@@ -86,7 +86,7 @@ body * {
 #app {
     max-width: 900px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 3rem;
 }
 
 button {
@@ -97,7 +97,8 @@ button {
 }
 
 button:hover {
-    opacity: 0.8;
+    opacity: 0.9;
+    transform: scale(1.2)
 
 }
 
@@ -110,7 +111,7 @@ button.toggle {
 }
 
 .pink {
-    color: rgba(240, 46, 170);
+    color: rgba(220, 46, 170);
 }
 
 .blue {
@@ -121,7 +122,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 4rem 0;
+    margin: 6rem 0 4rem;
 }
 
 header h1 {
@@ -150,18 +151,47 @@ header h1 {
     height: 3.2rem;
     border: none;
     padding: 0 1rem;
-    cursor: pointer;
 }
 
-.search button:hover {
-    filter: brightness(1.2);
+.wrapper-table {
+    with: 100%;
+    height: 76vh;
+    overflow-y: auto;
+    border-radius: 1rem;
+    background-color: transparent;
+}
+
+
+.wrapper-table::-webkit-scrollbar-button:end:increment,
+.wrapper-table::-webkit-scrollbar-button:end:decrement {
+    display: none;
+}
+
+
+.wrapper-table::-webkit-scrollbar {
+    width: 0.9rem;
+    height: .5rem;
+    background-color: transparent;
+    border-radius: 1.5rem;
+}
+
+.wrapper-table::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 1.5rem;
+}
+
+.wrapper-table::-webkit-scrollbar-thumb {
+    background-color: var(--text-color-tertiary);
+    border-radius: 1.5rem;
+    height: .3rem;
 }
 
 table {
-    width: 100%;
+    width: 99%;
     border-collapse: collapse;
-
     box-shadow: rgba(var(--color-actived), 0.4) 0px 3px, rgba(var(--color-actived), 0.3) 0px 7px, rgba(var(--color-actived), 0.2) 0px 13px, rgba(var(--color-actived), 0.1) 0px 20px, rgba(var(--color-actived), 0.05) 0px 25px;
+    border-radius: 0.9rem;  
+    padding-bottom: 2rem;
 }
 
 table * {
@@ -173,28 +203,32 @@ table th {
     background-color: var(--bg-table-title);
     color: var(--text-color-secondary);
     text-align: left;
-    font-weight: normal;
     padding: 1.5rem;
     font-size: 1.6rem;
+    position:sticky;
+    top: 0;
 }
 
 table th:first-child {
-    border-top-left-radius:  0.6rem;
+    border-top-left-radius: 0.9rem;
 }
 
 table th:last-child {
-    border-top-right-radius:  0.6rem;
+    border-top-right-radius: 0.9rem;
 }
 
 table td {
     padding: 1.5rem;
     text-align: left;
 }
+
 td.user {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
+
+
 
 table tr:nth-child(even) {
     background-color: var(--bg-table-primary);
@@ -226,4 +260,10 @@ td .remove {
     border: none;
     cursor: pointer;
     color: var(--bg-button-remove);
+}
+
+@media (max-width: 425px) {
+    :root {
+        font-size: 40%;
+    }
 }
