@@ -60,6 +60,10 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - CSS
 - Javascript
 - Git e Github
+<br/>
+
+## 💻 Deploy 
+- https://gisellebm.github.io/GitFav-v2/
 
 <br/>
 
