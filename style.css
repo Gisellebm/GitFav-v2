@@ -27,8 +27,8 @@ html.light body {
     background-color: var(--bg-color-body-secondary);
 }
 
-html.light .ph-moon,
-html:not(.light) .ph-sun {
+html.light .ph-sun,
+html:not(.light) .ph-moon {
     display: none;
 }
 
