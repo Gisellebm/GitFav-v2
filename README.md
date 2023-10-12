@@ -13,7 +13,9 @@
 
 <br/>
 
+[GitHub-Favorites1.webm](https://github.com/Gisellebm/GitFav-v2/assets/55713609/3446d449-7a98-4bdb-835f-879b4c1455e0)
 
+<img src="https://github.com/Gisellebm/GitFav-v2/assets/55713609/266d5caf-b4f6-42be-9e02-d9f38cb771cb" width=250px />
 
 
 
