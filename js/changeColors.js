@@ -14,7 +14,7 @@ buttonBlue.addEventListener('click', () => {
 buttonPink.addEventListener('click', () => {
     const sheet = new CSSStyleSheet();
     sheet.insertRule(`:root {
-        --color-actived: 220, 57, 160;
+        --color-actived: 219, 77, 199;
     }
     `);
     document.adoptedStyleSheets = [sheet];
