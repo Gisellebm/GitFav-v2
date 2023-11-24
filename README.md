@@ -17,7 +17,7 @@
 
 
 
-<img src="https://github.com/Gisellebm/GitFav-v2/assets/55713609/fd97902b-0196-440b-ac83-9e742d21f668" width=250px />
+<img src="https://github.com/Gisellebm/GitFav-v2/assets/55713609/fd97902b-0196-440b-ac83-9e742d21f668" width=240px />
 
 
 
